@@ -1,0 +1,8 @@
+import java.util.*;
+public class xyz{
+public static void main(String[] args){
+Scanner s= new Scanner(System.in);
+System.out.println("Enter the input: ");
+int a= s.nextInt();
+System.out.println("Input you entered is: "+a);
+}
