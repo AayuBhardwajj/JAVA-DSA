@@ -1,0 +1,27 @@
+import java.util.*;
+public class Rephrase {
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter your string input: ");
+        String sr=s.nextLine();
+        System.out.println("Your string input is: "+sr);
+        System.out.println(rephraseToUpperCase(sr));
+    }
+    public static String rephraseToUpperCase(String sr){
+        StringBuilder xyz=new StringBuilder("");
+        char ch=Character.toUpperCase(sr.charAt(0));
+        xyz.append(ch);
+        for(int i=1;i<sr.length();i++){
+            if(sr.charAt(i)==' ' && i<sr.length()-1){
+                xyz.append(' ');
+                i++;
+                xyz.append(Character.toUpperCase(sr.charAt(i)));
+            }
+            else{
+                xyz.append(sr.charAt(i));
+            }
+        }
+        return xyz.toString();
+
+    }
+}
