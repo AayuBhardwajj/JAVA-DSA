@@ -1,0 +1,31 @@
+import java.util.*;
+public class Largeststring {
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the number of String inputs you wanna enter: ");
+        int a=s.nextInt();
+        String str[]=new String[a];
+        System.out.println("Enter your "+a+" inputs: ");
+        for(int i=0;i<str.length;i++){
+            str[i]=s.next();
+        }
+        printStr(str);
+        findGreatest(str);
+
+    }
+    public static void printStr(String str[]){
+        for(int i=0;i<str.length;i++){
+            System.out.println("The String inputs you entered are: "+str[i]);
+        }
+        System.out.println();
+    }
+    public static void findGreatest(String str[]){
+        String lar=str[0];
+        for(int i=1;i<str.length;i++){
+            if(lar.compareTo(str[i])<0){
+                lar=str[i];
+            }
+        }
+        System.out.println("The largest of these is: "+lar);
+    }
+}
