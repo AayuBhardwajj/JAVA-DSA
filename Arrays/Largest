@@ -1,0 +1,17 @@
+package NewStart.Prac;
+
+public class Largest {
+    public static void main(String[] args){
+        int arr[]={12,39,5,21,75,59,104};
+        System.out.println("Largest of all elements is: "+findL(arr));
+    }
+    public static int findL(int arr[]){
+        int largest=arr[0];
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]>largest){
+                largest=arr[i];
+            }
+        }
+        return largest;
+    }
+}
