@@ -9,3 +9,5 @@ Well-Structured Code: Each file is well-commented and follows clean coding pract
 DSA Topics Covered:
 * Arrays
 * Strings
+* Sorting Algorithms
+* 
