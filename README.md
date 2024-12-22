@@ -12,6 +12,5 @@ DSA Topics Covered:
 * Sorting Algorithms
 * Recursion
 * Divide N Conquer
-* LeetCode
 * BackTracking 
  
