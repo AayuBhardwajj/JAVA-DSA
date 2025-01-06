@@ -12,5 +12,6 @@ DSA Topics Covered:
 * Sorting Algorithms
 * Recursion
 * Divide N Conquer
-* BackTracking 
+* BackTracking
+* ArrayList
  
