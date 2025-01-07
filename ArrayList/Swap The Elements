@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Swap {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter the size of arrayList: ");
+        int size=s.nextInt();
+        ArrayList<Integer> list=new ArrayList<>();
+        System.out.println("Enter the "+size+" elemts: ");
+        for(int i=0;i<size;i++){
+            int input=s.nextInt();
+            list.add(input);
+        } 
+        System.out.println("Enter the index of first element that you wanna swap: ");
+        int fir=s.nextInt();
+        System.out.println("Enter the index of second element that you wanna swap: ");
+        int sec=s.nextInt();
+
+        System.out.println("The elements entered: ");
+        System.out.println(list);
+        System.out.println();
+        System.out.println("Modified list");
+        swapIt(list,fir,sec);
+
+    }
+    public static void swapIt(ArrayList<Integer> list,int fir, int sec){
+        int temp=list.get(fir);
+        list.set(fir,list.get(sec));
+        list.set(sec, temp);
+
+        System.out.println(list);
+    }
+}
