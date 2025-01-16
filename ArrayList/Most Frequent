@@ -1,0 +1,59 @@
+package ArrayList;
+import java.util.*;
+public class MostFrequent {
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter the number of elements you wanna enter in the list: ");
+        int num=s.nextInt();
+        ArrayList<Integer>list= new ArrayList<>();
+        System.out.println("Enter the "+num+" elements: ");
+        for(int i=0;i<num;i++){
+            int input=s.nextInt();
+            list.add(input);
+        }
+        System.out.println("The final list: ");
+        System.out.println(list);
+        System.out.println();
+        System.out.println("Enter the key: ");
+        int key=s.nextInt();
+        findMaxTarget(list, key);
+    }
+    public static void findMaxTarget(ArrayList<Integer> list, int key){
+        ArrayList<Integer> targets=new ArrayList<>();
+        ArrayList<Integer> count=new ArrayList<>();
+        for(int i=0;i<list.size()-1;i++){
+            if(list.get(i)==key){
+                int target=list.get(i+1);
+            
+            boolean found=false;
+            for(int j=0;j<targets.size();j++){
+                if(targets.get(j)==target){
+                    count.set(j, count.get(j)+1);
+                    found=true;
+                    break;
+                }
+            }
+            if(found==false){
+                targets.add(target);
+                count.add(1);
+            }
+        }
+    }
+            int max=0;
+            int freq=-1;
+            for(int k=0;k<count.size();k++){
+                if(count.get(k)>max){
+                    max=count.get(k);
+                    freq=targets.get(k);
+                }
+        }
+    
+      if(freq!=-1){
+        System.out.println("The number occuring max times just after the key is: "+freq);
+      }
+      else{
+        System.out.println("No element found after key");
+      }
+    }
+}
+
