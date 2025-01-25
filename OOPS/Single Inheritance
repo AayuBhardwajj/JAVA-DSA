@@ -1,0 +1,19 @@
+public class Sinheritance{
+
+ static class parent {
+    public void pC(){
+        System.out.println("This is from the parent class");
+    }
+}
+    static class child extends parent{
+        public void cC(){
+            System.out.println("This is from 'Child class' derived from 'Parent class' using single level inheritance");
+        }
+    }
+ 
+    public static void main(String[] args){
+        child c1=new child();
+        c1.pC();
+        c1.cC();
+    }
+}
