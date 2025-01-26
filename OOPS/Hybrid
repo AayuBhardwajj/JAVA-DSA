@@ -1,0 +1,34 @@
+public class Hyb {
+    class animal{
+        void pO(){
+            System.out.println("This is the Parent Class, animal");
+        }
+    }
+    class landAnimal extends animal{
+        void cO1(){
+            System.out.println("This is the  Derived class of animal Class, and is the land Animal  ");
+        }
+    }
+    class elephant extends landAnimal{
+        void lA(){
+            System.out.println("This is the Derived class of landAnimal Class, and is the elephant");
+        }
+    }
+    class waterAnimal extends animal{
+        void wA(){
+            System.out.println("This is the Derived class of animal Class, and is the waterAnimal");
+        }
+    }
+    class fish extends waterAnimal{
+        void fI(){
+            System.out.println("This is the Derived class of water Animal Class, and is the Fish");
+        }
+    }
+    public static void main(String[] args) {
+        Hyb h1= new Hyb();
+        fish f1= h1.new fish();
+        f1.pO();
+        f1.wA();
+        f1.fI();
+    }
+}
