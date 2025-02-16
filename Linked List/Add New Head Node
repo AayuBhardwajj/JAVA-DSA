@@ -15,6 +15,7 @@ public void addNodeFromFront(int data){
 Node newNode= new Node(data);
 if(Head==null){
 Head==Tail==newNode;
+return;
 }
 newNode.next=Head;
 Head=newNode;
