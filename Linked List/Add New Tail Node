@@ -6,7 +6,7 @@ Node next;
 
 public Node(int data){
 this.data=data;
-this.next=next;
+this.next=null;
 }
 }
 
@@ -16,11 +16,11 @@ public static Node Tail;
 public void addFromBack(int data){
 Node newNode= new Node(data);
 if(Head==null){
-Head==Tail==newNode;
+Head=Tail=newNode;
 return;
 }
 Tail.next=newNode;
-next=newNode;
+Tail=newNode;
 }
 
 public static void main(String args[]){
