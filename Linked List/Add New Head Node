@@ -1,11 +1,11 @@
 public class LinkedList{
 
-public staic class Node{
+public static class Node{
 int data;
 Node next;
 public Node(int data){
 this.data=data;
-this.next=next;
+this.next=null;
 }
 }
 public static Node Head;
@@ -14,7 +14,7 @@ public static Node Tail;
 public void addNodeFromFront(int data){
 Node newNode= new Node(data);
 if(Head==null){
-Head==Tail==newNode;
+Head=Tail=newNode;
 return;
 }
 newNode.next=Head;
