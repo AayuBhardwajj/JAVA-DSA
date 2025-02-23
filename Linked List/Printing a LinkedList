@@ -1,0 +1,50 @@
+public class PrintLL {
+    public static class Node{
+        int data;
+        Node next;
+
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        } 
+    }
+        public static Node Head;
+        public static Node Tail;
+
+        public void addFromFront(int data){
+            Node newN= new Node(data);
+            if(Head==null){
+                Head=Tail=newN;
+                return;
+            }
+            newN.next=Head;
+            Head=newN;
+        }
+        public void addFromBack(int data){
+            Node newN= new Node(data);
+            if(Head==null){
+                Head=Tail=newN;
+                return;
+            }
+            Tail.next=newN;
+            Tail=newN;
+        }
+        public void printIn(){
+            if(Head==null){
+                System.out.println("No data found");
+            }
+            Node temp=Head;
+            while(temp!=null){
+                System.out.println(temp.data+" ");
+                temp=temp.next;
+            }
+    }
+    public static void main(String[] args){
+        PrintLL ll= new PrintLL();
+        ll.addFromFront(1);
+        ll.addFromFront(2);
+        ll.addFromBack(3);
+        ll.addFromBack(4);
+        ll.printIn();
+    }
+}
