@@ -32,12 +32,14 @@ public class PrintLL {
         public void printIn(){
             if(Head==null){
                 System.out.println("No data found");
+            return;
             }
             Node temp=Head;
             while(temp!=null){
-                System.out.println(temp.data+" ");
+                System.out.print(temp.data+" ");
                 temp=temp.next;
             }
+            System.out.print("null");
     }
     public static void main(String[] args){
         PrintLL ll= new PrintLL();
