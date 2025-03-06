@@ -1,0 +1,32 @@
+public class PrintLL {
+    public static class Node{
+        int data;
+        Node next;
+
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        } 
+    }
+        public static Node Head;
+        public static Node Tail;
+        public static int size;
+
+    public void addNew(int data, int index){
+        if(index==0){
+            addFromFront(data);
+            return;
+        }
+        Node newNode= new Node(data);
+        size++;
+        Node temp=Head;
+        int i=0;
+        while(i<index-1){
+            temp=temp.next;
+            i++;
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
+
+    }
+}
