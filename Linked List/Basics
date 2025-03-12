@@ -8,4 +8,7 @@ public static Node{
     this.next=null;
     }
 }
+
+public static Node Head;
+public static Node Tail;
 }
