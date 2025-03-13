@@ -11,36 +11,7 @@ public class Rev {
     public static Node Head;
     public static Node Tail;
 
-    public void addFrnt(int data){
-        Node newNo= new Node(data);
-        if(Head==null && Tail==null){
-            Head=Tail=newNo;
-            return;
-        }
-        newNo.next=Head;
-        Head=newNo;
-    }
-    public void addBck(int data){
-        Node newNo= new Node(data);
-        if(Head==null && Tail==null){
-            Head=Tail=newNo;
-            return;
-        }
-        Tail.next=newNo;
-        Tail=newNo;
-    }
-    public void printThis(){
-        if(Head==null && Tail==null){
-            System.out.println("No nodes found in the memory");
-            return;
-        }
-        Node temp=Head;
-        while(temp!=null){
-            System.out.print(temp.data+"----->");
-            temp=temp.next;
-        }
-        System.out.println("null");
-    }
+  
     public void reverse(){
         Node prev=null;
         Node curr=Tail=Head;
@@ -53,15 +24,5 @@ public class Rev {
         }
         Head=prev;
     }
-    public static void main(String[] args){
-        Rev ll= new Rev();
-        ll.addFrnt(1);
-        ll.addBck(2);
-        ll.addBck(3);
-        ll.addBck(4);
-        ll.addBck(5);
-        ll.printThis();
-        ll.reverse();
-        ll.printThis();
-    }
+    
 }
