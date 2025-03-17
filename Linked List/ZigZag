@@ -56,10 +56,8 @@ public class ZigZag {
             right.next=leftH;
 
             left=leftH;
-            right=rightH;
-
-        }
-    }
+            right=rightH;}}
+    
     public static void main(String[] args){
         Head = new Node(1);
         Head.next= new Node(2);
