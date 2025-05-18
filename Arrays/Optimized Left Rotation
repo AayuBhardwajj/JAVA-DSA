@@ -23,8 +23,8 @@ public class xyz {
         if(rot>arr.length){
             rot=rot%arr.length;
         }
-        optRot(arr, 0, arr.length-1);
         optRot(arr, 0, rot-1);
         optRot(arr, rot, arr.length-1);
+        optRot(arr, 0, arr.length-1);
     }
 }
