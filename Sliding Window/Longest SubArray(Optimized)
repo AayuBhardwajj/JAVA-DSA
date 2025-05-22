@@ -1,0 +1,25 @@
+ public static void optimizedSubArray(int arr[], int x){
+        int start=0;
+        int end=0;
+        int maxL=0;
+        int length=0;
+        int sum=0;
+        int bestS=0;
+        while(end<arr.length){
+        sum+=arr[end];
+        while(sum>x && start<=end){
+            sum-=arr[start];
+            start++;
+        }
+        length=end-start+1;
+        if(length>maxL){
+            maxL=length;
+            bestS=start;
+        }
+        end++;
+        }
+        System.out.println("longest length of subArray having sum less than equal to "+x+": "+maxL);
+        for(int i=bestS;i<bestS+maxL;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
