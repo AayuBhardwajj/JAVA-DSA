@@ -1,0 +1,34 @@
+public class Consecutive Ones{
+ public static void main(String[] args){
+        int arr[]={1,1,1,0,0,0,1,1,1,1,0};
+        int k=2;
+        //findMaxLength(arr, k);
+        findMxLn(arr, k);
+    }
+ public static void findMxLn(int arr[], int k){
+        int left=0;
+        int right=0;
+        int length=0;
+        int zeroc=0;
+        int maxLth=0;
+        if(arr.length==0){
+            System.out.println(arr[0]);
+            return;
+        }
+        while(right<arr.length){
+            if(arr[right]==0){
+                zeroc++;
+            }
+            if(zeroc>k){
+                if(arr[left]==0){
+                    zeroc--;
+                }
+                left++;
+            }
+            length=right-left+1;
+            maxLth=Math.max(maxLth, length);
+            right++;
+        }
+        System.out.println(maxLth);
+    }
+}
