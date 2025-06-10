@@ -54,9 +54,9 @@ public class In{
         tt.permission();
 
         Toyota tyy= new Toyota();
-        tyy.engine();;
-        tyy.type();;
-        tyy.tyreSize();;
+        tyy.engine();
+        tyy.type();
+        tyy.tyreSize();
         tyy.permission();
     }
 }
