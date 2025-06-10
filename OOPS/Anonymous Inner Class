@@ -1,0 +1,15 @@
+class A{
+    public void show(){
+        System.out.println("This has been defined in A Class");
+    }
+}
+public class xyz {
+    public static void main(String[] args) {
+        A obj= new A(){
+            public void show(){
+                System.out.println("This has been defined in Anonymous Inner Class");
+            }
+        };
+        obj.show();
+    }
+}
