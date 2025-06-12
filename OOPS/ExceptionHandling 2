@@ -1,0 +1,16 @@
+public class Tc2 {
+    public static void main(String[] args) {
+        int arr[]= new int[5];
+        int i=9;
+        int j=0;
+        try{
+            System.out.println(arr[9]);
+            j=i/j;
+        } catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("Array doesn't have this much number of elements");
+        }
+        catch(ArithmeticException e){
+            System.out.println("No mathematical number is divisible by 0");
+        }
+    }
+}
