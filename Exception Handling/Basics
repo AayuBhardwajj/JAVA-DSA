@@ -7,6 +7,6 @@ public class Tc1 {
         } catch(Exception e){
             System.out.println("There might be an error");
         }
-        System.out.println("Vo chhodo, Aur btao kya haal hai");
+        System.out.println("This was a program related to try - catch");
     }
 }
