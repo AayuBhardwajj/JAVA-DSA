@@ -1,0 +1,30 @@
+package Arrays;
+import java.util.*;
+public class TwoSum {
+    public static void main(String[] args) {
+        int arr[]={2,6,5,8,11};
+        int target=14;
+        Arrays.sort(arr);
+    System.out.println(best(arr,target));
+    }
+  public static int[] best(int arr[],int target){
+   int start=0;
+   int end=arr.length-1;
+
+  while(start<end){
+ int sum=arr[start]+arr[end];
+  if(sum==target){
+  return new int[] {start,end};
+}
+  if(sum>target){
+end--;
+}
+if(sum<target){
+start++;
+}
+}
+return new int[] {};
+}
+
+
+
