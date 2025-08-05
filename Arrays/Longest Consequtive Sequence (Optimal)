@@ -1,0 +1,26 @@
+class Solution {
+    public int longestConsecutive(int[] nums) {
+        if(nums.length==0){
+            return 0;
+        }
+        HashSet <Integer> Hs= new HashSet<>();
+        int longest=0;
+        for(int i: nums){
+            Hs.add(i);
+        }
+        
+        for(int i: Hs){
+            if(!Hs.contains(i-1)){
+            int count=1;
+            int track=i;
+
+            while(Hs.contains(track+1)){
+                count++;
+                track++;
+            }
+            longest=Math.max(longest, count);
+        }
+    }
+    return longest;
+}
+}
