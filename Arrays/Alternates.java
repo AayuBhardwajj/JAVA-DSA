@@ -1,4 +1,3 @@
-package Arrays;
 import java.util.*;
 public class Alternates {
     public static void main(String[] args){
