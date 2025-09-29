@@ -1,4 +1,4 @@
-public class Rev {
+public class ReverseTheLinkedList {
     public static class Node{
         int data;
         Node next;
@@ -7,6 +7,7 @@ public class Rev {
             this.data=data;
             this.next=null;
         }
+        
     }
     public static Node Head;
     public static Node Tail;
