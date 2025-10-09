@@ -1,0 +1,36 @@
+class count{
+    int count;
+    public void increment(){
+    count++;
+}
+}
+public class ThrdJoin{
+public static void main(String[] args){
+    count c1= new count();
+    Runnable obj= ()-> {
+            for(int i=0;i<1000;i++){
+                c1.increment();
+            }
+        };
+
+        Runnable ob1= ()->{
+            for(int i=0;i<1000;i++){
+                c1.increment();
+            }
+        };
+
+        Thread t1= new Thread(obj);
+        Thread t2= new Thread(ob1);
+
+        t1.start();
+        t2.start();
+        try{
+        t1.join();
+        t2.join();
+        } catch(InterruptedException e){
+            System.out.println("Hanflrd");
+        }
+        System.out.println(c1.count);
+    }
+
+}

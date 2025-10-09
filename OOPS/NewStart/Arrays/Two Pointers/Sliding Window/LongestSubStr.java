@@ -1,0 +1,28 @@
+public class LongestSubStr {
+    public static void main(String[] args){
+        String str="abcabcbb";
+        try{
+        findLongestSubStringWithoutRepeatingTheCharacters(str);
+        } catch(StringIndexOutOfBoundsException e){
+            System.out.println("Handled");
+        }
+    }
+    public static void findLongestSubStringWithoutRepeatingTheCharacters(String str) throws StringIndexOutOfBoundsException{
+        int start=0;
+        int maxL=0;
+        int arr[]= new int[256];
+        for(int end=0;end<str.length();end++){
+            char x= str.charAt(end);
+            arr[x]++;
+
+            if(arr[x]>1 ){
+                arr[str.charAt(start)]--;
+                start++;
+            }
+
+            maxL=Math.max(maxL, end-start+1);
+        }
+        System.out.println("Maximum length of subarray having non repeating characters is: "+maxL);
+
+    }
+}

@@ -1,0 +1,36 @@
+package Arrays;
+import java.util.*;
+import java.util.ArrayList;;
+public class PascalT2 {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter the total rows required: ");
+        int rows=s.nextInt();
+        System.out.println("Enter the total columns required: ");
+        int cols=s.nextInt();
+       // System.out.println(printTheElement(rows, cols));
+       printTheTriangle(rows, cols);
+        
+    }
+    public static int printTheElement(int rows, int cols){
+        int a=1;
+        for(int i=0;i<cols;i++){
+            a=a*(rows-i);
+            a/=(i+1);
+        }
+        //System.out.println(a);
+        return a;
+    }
+
+    public static void printTheTriangle(int rows, int cols){
+        ArrayList <ArrayList <Integer>> mainList= new ArrayList<>();
+        for(int i=0;i<rows;i++){
+            ArrayList <Integer> tempList= new ArrayList<>();
+            for(int j=0;j<=i;j++){
+                tempList.add(printTheElement(i, j));
+            }
+            mainList.add(tempList);
+        }
+        System.out.println(mainList);
+    }
+}

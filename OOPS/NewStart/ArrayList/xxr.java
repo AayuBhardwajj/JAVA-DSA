@@ -1,0 +1,51 @@
+package ArrayList;
+import java.util.ArrayList;
+public class xxr {
+    public static void main(String[] args) {
+        ArrayList<Integer> al= new ArrayList<>();
+        al.add(3);
+        al.add(1);
+        al.add(-2);
+        al.add(-5);
+        al.add(2);
+        al.add(-4);
+        
+        reArr(al);
+    }
+    public static void reArr(ArrayList<Integer> al){
+        ArrayList<Integer> pos= new ArrayList<>();
+        ArrayList<Integer> neg= new ArrayList<>();
+        for(int i=0;i<al.size();i++){
+            if(al.get(i)<0){
+            neg.add(al.get(i));
+            } else{
+                pos.add(al.get(i));
+            }
+        }
+
+         System.out.println("Positives: " + pos);
+    System.out.println("Negatives: " + neg);
+
+        al.clear(); 
+
+        int i=0; 
+        int j=0;
+
+        while(i<pos.size() && j<neg.size()){
+            al.add(pos.get(i++));
+            al.add(neg.get(j++));
+        }  
+        
+        while(i<pos.size()){
+            al.add(pos.get(i++));
+        }
+
+        while(j<neg.size()){
+            al.add(neg.get(j++));
+        }
+        System.out.println("Altered List: "+al);
+
+    }
+
+
+}

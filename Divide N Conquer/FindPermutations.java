@@ -1,4 +1,4 @@
-public class Permutations {
+public class FindPermutations {
     public static void main(String[] args){
         String sr="abc";
         findPermutations(sr, "");

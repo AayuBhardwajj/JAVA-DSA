@@ -1,0 +1,72 @@
+//package Stack;
+import java.util.*;
+public class PushAtBottom {
+    public static class Node{
+        int data;
+        Node next;
+
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+
+    public static Node Head;
+    public static Node Tail;
+
+    public static boolean isEmpty(){
+        return Head==null;
+    }
+
+    public static void push(int data){
+        Node newN= new Node(data);
+        if(Head==null){
+            Head=newN;
+            return;
+        }
+        newN.next=Head;
+        Head=newN;
+    }
+    public static int pop(){
+        if(Head==null){
+            return -1;
+        }
+        int da=Head.data;
+        Head=Head.next;
+        return da;
+    }
+
+    public static int peek(){
+        if(Head==null){
+            return -1;
+        }
+        return Head.data;
+    }
+
+        public static void pushAtB(PushAtBottom b,int data){
+            if(isEmpty()){
+                b.push(data);
+                return;
+            }
+            int top= b.pop();
+            pushAtB(b, data);
+            b.push(data);
+        }
+    
+    public static void main(String[]args){
+        PushAtBottom b= new PushAtBottom();
+        b.push(1);
+        b.push(2);
+        b.push(3);
+        b.push(4);
+        while(!isEmpty()){
+            System.out.println(b.peek());
+            b.pop();
+        }
+        b.pushAtB(b,7);
+        while(!isEmpty()){
+            System.out.println(b.peek());
+            b.pop();
+        }
+    }
+}

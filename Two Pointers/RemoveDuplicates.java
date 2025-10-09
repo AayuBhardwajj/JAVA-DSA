@@ -3,6 +3,7 @@
 public class RemoveDuplicates {
     public static void main(String[] args){
         int arr[]={1,1,2};
+       // noDup(arr);
         noDup(arr);
     }
     public static void noDup(int arr[]){
@@ -17,6 +18,10 @@ public class RemoveDuplicates {
                 System.err.print(arr[i]+" ");
             }
         }
+
+        
+
+        
     }
 
 

@@ -1,0 +1,17 @@
+//package NewStart.Arrays;
+import java.util.*;
+public class Ls {
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter an integer input: ");
+        int a=s.nextInt();
+        findRev(a);
+    }
+    public static void findRev(int a){
+        while(a>0){
+            int ld=a%10;
+            System.out.print(ld+" ");
+            a=a/10;
+        }
+    }
+}

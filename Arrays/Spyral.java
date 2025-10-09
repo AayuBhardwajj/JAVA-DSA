@@ -17,7 +17,7 @@ public class Spyral {
         System.out.println();
         System.out.println("The spiral path of the elements is: ");
         spiralWay(arr, row, col);
-
+        s.close();
     }
     public static void printAr(int arr[][], int row, int col){
         for(int i=0;i<row;i++){

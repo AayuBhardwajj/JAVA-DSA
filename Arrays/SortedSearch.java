@@ -18,6 +18,7 @@ public class SortedSearch {
         int key=s.nextInt();
         printTheArray(arr, rows, cols);
         System.out.println(findTheKey(arr, rows, cols, key));
+        s.close();
 
     }
     public static void printTheArray(int arr[][], int rows, int cols){

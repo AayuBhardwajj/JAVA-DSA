@@ -1,0 +1,19 @@
+package Arrays;
+import java.util.HashMap;
+import java.util.Map;
+public class CountFreq {
+    public static void main(String[] args) {
+        int arr[]={1,1,2,3,2,4,5,6,2,1};
+        countTheFrequencies(arr);
+    }
+    public static void countTheFrequencies(int arr[]){
+        HashMap <Integer, Integer> hm= new HashMap<>();
+        for(int i: arr){
+            hm.put(i, hm.getOrDefault(i, 0)+1);
+        }
+        for(Map.Entry<Integer, Integer> en: hm.entrySet()){
+            System.out.println("The element: [ "+en.getKey()+" ]"+" appears: "+en.getValue()+" times");
+        }
+    }
+}
+

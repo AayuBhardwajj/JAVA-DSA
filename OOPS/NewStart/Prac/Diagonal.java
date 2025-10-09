@@ -1,0 +1,40 @@
+package NewStart.Prac;
+import java.util.*;
+public class Diagonal {
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        System.out.println("Enter the number of rows: ");
+        int rows= s.nextInt();
+        System.out.println("Enter the number of columns: ");
+        int cols= s.nextInt();
+        int arr[][]= new int[rows][cols];
+        System.out.println("Enter the elements ");
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                arr[i][j]=s.nextInt();
+            }
+        }
+        printArray(arr, rows, cols);
+System.out.println(findSumOfDiagonals(arr));
+    }
+    public static int findSumOfDiagonals(int arr[][]){
+        int pd=0;
+        for(int i=0;i<arr.length;i++){
+            pd+=arr[i][i];
+            if(i!= arr.length-i-1){
+                pd+=arr[i][arr.length-1-i];
+            }
+        }
+        return pd;
+    }
+    public static void printArray(int arr[][], int rows, int cols){
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                System.err.println("Element entered at position ( "+i+" , "+j+" )"+arr[i][j]);
+            }
+            System.err.println();
+        }
+        System.out.println();
+    }
+}
+
