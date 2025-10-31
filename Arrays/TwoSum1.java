@@ -1,6 +1,6 @@
 package Arrays;
 import java.util.*;
-public class TwoSum {
+public class TwoSum1 {
     public static void main(String[] args) {
         int arr[]={2,6,5,8,11};
         int target=14;
