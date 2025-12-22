@@ -5,7 +5,9 @@ public class MaxUnits {
         Arrays.sort(arr, (x, y) -> y[1] - x[1]);
         int total = 0;
         for (int[] a : arr) {
-            if (cap == 0) break;
+            if (cap == 0) {
+            break;
+            }
             int cnt = Math.min(cap, a[0]);
             total += cnt * a[1];
             cap -= cnt;
