@@ -1,25 +1,24 @@
 package BinarySearch;
 
-public class LeastCount {
+public class UpperBound {
     public static void main(String[] args){
-        int arr[]={1,2,3,3,7,8,9,9,9,11};
+        int arr[]={2,3,6,7,8,8,11,11,11,12};
         int x=9;
-        System.out.println(findLeastOccurance(arr, x));
+        uB(arr, x);
     }
-    public static int findLeastOccurance(int arr[],int x){
+    public static void uB(int arr[],int x){
         int start=0;
         int end=arr.length-1;
         int ans=arr.length;
         while(start<=end){
             int mid=start+(end-start)/2;
-            if(arr[mid]>=x){
+            if(arr[mid]>x){
                 ans=mid;
                 end=mid-1;
-            }
-            else{
+            }else{
                 start=mid+1;
             }
         }
-        return ans;
+        System.out.println(ans);
     }
 }
