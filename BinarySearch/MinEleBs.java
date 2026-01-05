@@ -11,6 +11,10 @@ public class MinEleBs {
         int end=arr.length-1;
         while(start<=end){
             int mid=start+(end-start)/2;
+            if(arr[start]<=arr[end]){
+                min=Math.min(arr[start],min);
+                return min;
+            }
             if(arr[start]<=arr[mid]){
                 min=Math.min(min, arr[start]);
                 start=mid+1;
