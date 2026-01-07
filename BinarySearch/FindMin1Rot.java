@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class FindMin1 {
+public class FindMin1Rot {
     public static void main(String[] args){
         int arr[]={3,4,5,1,2};
         System.out.println("Array was rotated: "+findRot(arr)+" times");
