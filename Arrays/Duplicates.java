@@ -13,7 +13,7 @@ public class Duplicates {
         printArr(arr);
         System.out.println();
         removeDup(arr);
-
+        s.close();
     }
     public static void removeDup(int arr[]){  
         int x=0;

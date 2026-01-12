@@ -18,8 +18,9 @@ public class ProducArry {
                 right=right*arr[j];
             }
             for(int x: nums){
-            System.out.println(x);
+            System.out.print(x+" ");
         }
     }
 }
+
 
