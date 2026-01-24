@@ -6,7 +6,7 @@ public class Subset{
         boolean[][] table = new boolean[len + 1][target + 1];
 
         for (int i = 0; i <= len; i++)
-            table[i][0] = true;
+            table[i][0] = true; 
 
         for (int i = 1; i <= len; i++) {
             for (int j = 1; j <= target; j++) {
