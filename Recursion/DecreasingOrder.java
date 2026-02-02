@@ -11,7 +11,7 @@ public class DecreasingOrder {
             System.out.println(input);
             return;
         }
-        System.out.println(input+" ");
+        System.out.print(input+" ");
         printRev(input-1);
     }
 }
