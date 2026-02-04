@@ -10,7 +10,7 @@ public class SubString {
         for(int i=0;i<input.length();i++){
             for(int j=i+1;j<=input.length();j++){
                 String substri= input.substring(i,j);
-                System.out.println(substri);
+                System.out.print(substri+" ");
             }
         }
     }

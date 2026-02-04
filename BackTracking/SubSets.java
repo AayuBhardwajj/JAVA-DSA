@@ -1,7 +1,7 @@
 package BackTracking;
 public class SubSets {
     public static void main(String[] args){
-        String str="abc";
+        String str="ab";
         findSubSetS(str, "", 0);
     }
     public static void findSubSetS(String str,String strr, int i){
