@@ -30,6 +30,39 @@ public class IterativeSearch {
         }
         System.out.println("data value "+s+" doesn't exists in the existing nodes");
     }
+
+    public static void addNode(int data){
+        Node newH= new Node(data);
+        if(Head==null){
+            Head=newH;
+            return;
+        }
+        newH.next=Head;
+        Head=newH;
+    }
+
+    public static void printll(){
+        if(Head==null){
+            System.out.println("No nodes exist");
+            return;
+        }
+        Node temp=Head;
+        while(temp!=null){
+            System.out.print(temp.data+"->");
+            temp=temp.next;
+        }
+        System.out.println("null");
+    }
+
+    public static void main(String args[]){
+        addNode(0);
+        addNode(1);
+        addNode(2);
+        addNode(3);
+        printll();
+
+        iterate(1);
+    }
 }
    
 
