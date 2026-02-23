@@ -1,4 +1,4 @@
-public class RevmFrmLast {
+public class RemoveFrmLast {
     public static class Node{
         int data;
         Node next;
