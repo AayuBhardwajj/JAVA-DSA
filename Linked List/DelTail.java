@@ -52,6 +52,20 @@ public static void removeTail(){
     Tail=temp;
 
 }
+
+public static void countLength(){
+    if(Head==null){
+        System.out.println("Empty ll");
+        return;
+    }
+    Node temp=Head;
+    int count=0;
+    while(temp!=null){
+        count++;
+        temp=temp.next;
+    }
+    System.out.println("Number of nodes are: " +count);
+}
 public static void main(String[] args) {
     DelTail ll= new DelTail();
     ll.AddNode(0);
@@ -62,5 +76,6 @@ public static void main(String[] args) {
     removeTail();
     System.out.println();
     printNode();
+    countLength();
 }
 }
