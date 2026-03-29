@@ -12,9 +12,7 @@ public class SubSets {
         System.out.println(result);
     }
 
-    public static void findSubsets(int index, int arr[],
-                                   List<Integer> current,
-                                   List<List<Integer>> result){
+    public static void findSubsets(int index, int arr[],List<Integer> current,List<List<Integer>> result){
 
         // Base condition
         if(index == arr.length){
