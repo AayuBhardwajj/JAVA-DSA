@@ -2,7 +2,7 @@ package Recursion;
 
 public class Fibo {
     public static void main(String[] args){
-        System.out.println(findFib(4));
+        System.out.println(findFib(5));
     }
     public static int findFib(int x){
         if(x==0 || x==1){

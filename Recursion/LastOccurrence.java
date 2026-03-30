@@ -1,6 +1,6 @@
 import java.util.*;
 import java.util.Scanner;
-public class LastOccurence {
+public class LastOccurrence {
     public static void main(String[] args) {
         Scanner s= new Scanner(System.in);
         System.out.println("Enter the size of array: ");

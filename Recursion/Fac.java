@@ -2,7 +2,7 @@ package Recursion;
 
 public class Fac {
     public static void main(String[] args){
-        System.out.println(findFactorial(4));
+        System.out.println(findFactorial(5));
     }
 
     public static int findFactorial(int n){
