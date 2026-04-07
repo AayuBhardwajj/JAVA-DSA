@@ -1,6 +1,6 @@
 package SubArr;
 
-public class SbArS1 {
+public class SubArrayProductLessThanK {
     public static void main(String[] args){
         int arr[]={1,2,3};
         int value=10;
