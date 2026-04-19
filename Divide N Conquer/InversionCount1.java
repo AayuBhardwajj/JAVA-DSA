@@ -1,5 +1,5 @@
 import java.util.*;
-public class InversionCount {
+public class InversionCount1 {
     static int count=0;
     public static void main(String[] args){
         Scanner s= new Scanner(System.in);

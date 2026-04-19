@@ -1,4 +1,4 @@
-package SubArr;
+package SlidingWindow;
 import java.util.HashSet;
 import java.util.HashMap;
 public class SbArWithKDifferentInt {
@@ -47,3 +47,5 @@ public class SbArWithKDifferentInt {
         return count;
     }
 }
+
+

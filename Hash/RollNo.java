@@ -9,7 +9,7 @@ public class RollNo {
         map.put(0002, "Aayu");
         map.put(0003, "Systumm");
         System.out.println(map);
-       
+         
 
         for(Map.Entry<Integer, String> e: map.entrySet()){
             System.out.print(e.getKey()+" "+ e.getValue());

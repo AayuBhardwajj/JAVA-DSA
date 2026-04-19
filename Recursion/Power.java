@@ -3,7 +3,8 @@ public class Power {
         int a=2;
         int power=5;
         //findPower(a, power);
-        System.out.println(findPower1(a, power));
+        //System.out.println(findPower1(a, power));
+        System.out.println(halfPower(a, power));
     }
     public static void findPower(int a, int power){
         int x=1;
@@ -17,5 +18,17 @@ public class Power {
             return 1;
         }
         return a*findPower1(a, power-1);
+    }
+    public static int halfPower(int a, int power){
+        if(power==0){
+            return 1;
+        }
+        int halfP=halfPower(a, power/2);
+        int halfpowe=halfP*halfP;
+        if(power%2==0){
+            return halfpowe;
+        }else{
+            return a*halfpowe;
+        }
     }
 }

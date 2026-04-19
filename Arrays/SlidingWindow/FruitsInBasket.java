@@ -1,4 +1,4 @@
-package SubArr;
+package SlidingWindow;
 import java.util.HashSet;
 import java.util.HashMap;
 public class FruitsInBasket {
@@ -31,8 +31,8 @@ public class FruitsInBasket {
         int left=0;
         int maxL=Integer.MIN_VALUE;
         for(int right=0;right<arr.length;right++){
-            hm.put(arr[right], hm.getOrDefault(arr[right], 0)+1);
-
+            hm.put(arr[right], hm.getOrDefault(arr[right], 0)+1); // hm.put -> Adds a value n its frequency in hashmap
+                                                                               // hm.getOrDefault-> checks in the map, the frequency of the element being mentioned
             while(hm.size()>2){
                 hm.put(arr[left], hm.get(arr[left])-1);
                 

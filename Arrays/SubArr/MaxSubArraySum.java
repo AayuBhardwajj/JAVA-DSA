@@ -1,3 +1,4 @@
+package SubArr;
 public class MaxSubArraySum {
     public static void main(String[] args){
         int arr[]={1,-2,6,-1,3};
