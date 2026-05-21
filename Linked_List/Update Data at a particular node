@@ -1,0 +1,30 @@
+public class ModifyPos {
+    public static class  Node{
+        int data;
+        Node next;
+
+        public Node(int data) {
+            this.data=data;
+            this.next=null;
+        }
+
+    }
+    public static Node Head;
+    public static Node Tail;
+    public static int size;
+
+   public int updateAtPos(int x, int dy){
+        if(x> size || x<0){
+            System.out.println("Invalid position");
+            return -1;
+        }
+        int i=0;
+        Node temp=Head;
+        while(i<x){
+            temp=temp.next;
+            i++;
+        }
+        temp.data=dy;
+        return dy;
+    }
+}

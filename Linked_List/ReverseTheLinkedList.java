@@ -1,0 +1,29 @@
+public class ReverseTheLinkedList {
+    public static class Node{
+        int data;
+        Node next;
+
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+        
+    }
+    public static Node Head;
+    public static Node Tail;
+
+  
+    public void reverse(){
+        Node prev=null;
+        Node curr=Tail=Head;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        Head=prev;
+    }
+    
+}

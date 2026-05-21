@@ -1,0 +1,29 @@
+public class ModifyPos {
+    public static class  Node{
+        int data;
+        Node next;
+
+        public Node(int data) {
+            this.data=data;
+            this.next=null;
+        }
+
+    }
+    public static Node Head;
+    public static Node Tail;
+    public static int size;
+
+   public int findData(int x){
+        if(x>=size){
+            System.out.println("Nodes in this linked list are lesser than the index provided");
+            return -1;
+        }
+        Node temp=Head;
+        int i=0;
+        while(i<x){
+            temp=temp.next;
+            i++;
+        }
+        return temp.data;
+    }
+}
