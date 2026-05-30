@@ -3,7 +3,11 @@ package Placement;
 public class SortArray012 {
     public static void main(String args[]){
         int arr[]={1,2,0,0,2,1,0,1,1,2,2,0,0,0};
-        sortArr(arr);
+        //sortArr(arr);
+        dutchNationalFlag(arr);
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]);
+        }
     }
     public static void sortArr(int arr[]){
         int count0=0;
@@ -35,4 +39,32 @@ public class SortArray012 {
             System.out.print(arr[i]+" ");
         }
     }
+
+    public static void dutchNationalFlag(int arr[]){
+        int low=0;
+        int mid=0;
+        int high=arr.length-1;
+        while(mid<=high){
+            if(arr[mid]==0){
+                swap(arr, mid, low);
+                low++;
+                mid++;
+            }
+            else if(arr[mid]==1){
+                mid++;
+            }
+            else{
+                swap(arr, mid, high);
+                high--;
+            }
+        }
+    }
+
+    public static void swap(int arr[],int left, int right){
+        int temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        }
+
+
 }
