@@ -3,13 +3,16 @@ package Placement;
 public class SetMatrixZero {
     public static void main(String[] args) {
         int arr[][]={{1,1,1},
-                    {1,0,1},
+                    {0,1,1},
                     {1,1,1}};
                     
         int rows= arr.length; // initialie rows
         int cols= arr[0].length; // initialise cols
 
-        makeMatrixZero(arr, rows, cols);
+        // makeMatrixZero(arr, rows, cols);
+        // printMatrix(arr, rows, cols);
+
+        optimizedSetMatrix(arr, rows, cols);
         printMatrix(arr, rows, cols);
     }
     public static void makeMatrixZero(int arr[][], int rows, int cols){
@@ -43,4 +46,56 @@ public class SetMatrixZero {
             System.out.println();
         }
     }
+    
+    public static void optimizedSetMatrix(int arr[][], int rows, int cols){
+       
+
+        int col0 = 1; // Tracks whether first column should be zeroed
+
+        // Step 1: Mark rows and columns
+        for (int i = 0; i < rows; i++) {
+
+            if (arr[i][0] == 0) {
+                col0 = 0;
+            }
+
+            for (int j = 1; j < cols; j++) {
+
+                if (arr[i][j] == 0) {
+                    arr[i][0] = 0; // Mark row
+                    arr[0][j] = 0; // Mark column
+                }
+            }
+        }
+
+        // Step 2: Fill matrix using markers (bottom-up)
+        for (int i = rows - 1; i >= 0; i--) {
+
+            for (int j = cols - 1; j >= 1; j--) {
+
+                if (arr[i][0] == 0 || arr[0][j] == 0) {
+                    arr[i][j] = 0;
+                }
+            }
+
+            // Handle first column separately
+            if (col0 == 0) {
+                arr[i][0] = 0;
+            }
+        }
+    }
+
+    public static void printMatrix(int[][] arr) {
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr[0].length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+    }
 }
+    
+
