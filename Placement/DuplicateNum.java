@@ -1,9 +1,12 @@
 package Placement;
 
+import java.util.HashSet;
+
 public class DuplicateNum {
     public static void main(String[] args){
         int arr[]={1,3,4,4,2};
         findDup(arr);
+        findDupBetter(arr);
     }
     public static void findDup(int arr[]){
         for(int i=0;i<arr.length;i++){
@@ -20,4 +23,15 @@ public class DuplicateNum {
         }
     }
 }
+
+    public static void findDupBetter(int arr[]){
+        HashSet<Integer> hm= new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            if(hm.contains(arr[i])){
+                System.out.println(arr[i]);
+                return;
+            }
+            hm.add(arr[i]);
+        }
+    }
 }
