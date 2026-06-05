@@ -3,8 +3,8 @@ package Placement;
 public class RepeatingNMissing {
     public static void main(String[] args){
         int arr[][]={{1,3},{2,2}};
-      findMissing(arr);
-      
+        //findMissing(arr);
+        missingNumBetter(arr);
     }
     public static void findMissing(int arr[][]){
        int N=arr.length;
@@ -30,4 +30,27 @@ public class RepeatingNMissing {
     System.out.println("Missing number is: "+miss);
     System.out.println("Repeating number is: "+repeat);
 }
+
+    public static void missingNumBetter(int arr[][]){
+        int N=arr.length;
+        int n=N*N;
+
+        int freq[]= new int[n+1];
+        for(int rows[]:arr){
+            for(int x: rows){
+                freq[x]++;
+            }
+        }
+        int missing=0;
+        int repeating=0;
+        for(int i=1;i<=n;i++){
+            if(freq[i]==0){
+                missing=i;
+            }else if(freq[i]==2){
+                repeating=i;
+            }
+        }
+        System.out.println("Missing: "+missing);
+        System.out.println("Repeating: "+repeating);
+    }
 }
