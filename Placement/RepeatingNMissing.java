@@ -5,6 +5,7 @@ public class RepeatingNMissing {
         int arr[][]={{1,3},{2,2}};
         //findMissing(arr);
         missingNumBetter(arr);
+        optimizedMathApproach(arr);
     }
     public static void findMissing(int arr[][]){
        int N=arr.length;
@@ -53,4 +54,33 @@ public class RepeatingNMissing {
         System.out.println("Missing: "+missing);
         System.out.println("Repeating: "+repeating);
     }
+
+    public static void optimizedMathApproach(int arr[][]){
+        int N=arr.length;
+        int n=N*N;
+        // x+y 
+        // x-y
+        int actualSum= (n*(n+1))/2;
+        int actualSqSqum= ((n*(n+1))*(2*n+1))/6;
+        int orgSum=0;
+        int orgSqSum=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+            orgSum+=arr[i][j];
+            orgSqSum+=arr[i][j]*arr[i][j];
+        }
+    }
+
+        int val1= actualSum-orgSum;
+        int val2=actualSqSqum-orgSqSum;
+        val2=val2/val1;
+
+        int x= ( val1+val2)/2;
+        int y= x-val1;
+
+        System.out.println("Missing value: "+x);
+        System.out.println("Repeating Value: "+y);
+    }
+    
+
 }
