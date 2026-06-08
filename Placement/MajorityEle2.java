@@ -5,6 +5,7 @@ public class MajorityEle2 {
         int arr[]={3,2,3};
         findMajorEle(arr);
         better(arr);
+        mooreVoting(arr);
     }
     public static void findMajorEle(int arr[]){
         ArrayList<Integer> al= new ArrayList<>();
@@ -43,9 +44,9 @@ public class MajorityEle2 {
         int count2=0;
         int ele2=0;
         for(int i:arr){
-             if(i==ele1){
+             if(count1>0 && i==ele1){
                 count1++;
-            }else if(i==ele2){
+            }else if(count2>0 && i==ele2){
                 count2++;
             }else if(count1==0){
                 ele1=i;
@@ -59,5 +60,25 @@ public class MajorityEle2 {
                 count2--;
             }
         }
+
+        count1=0;
+        count2=0;
+        for(int i:arr){
+            if(i==ele1){
+                count1++;
+            }else if(i==ele2){
+                count2++;
+            }
+        }
+
+        ArrayList<Integer>al = new ArrayList<>();
+        if(count1>arr.length/3){
+            al.add(ele1);
+        }
+        if(count2>arr.length/3){
+            al.add(ele2);
+        }
+
+        System.out.println(al);
     }
 }

@@ -58,8 +58,7 @@ public class RepeatingNMissing {
     public static void optimizedMathApproach(int arr[][]){
         int N=arr.length;
         int n=N*N;
-        // x+y 
-        // x-y
+    
         int actualSum= (n*(n+1))/2;
         int actualSqSqum= ((n*(n+1))*(2*n+1))/6;
         int orgSum=0;
@@ -71,9 +70,9 @@ public class RepeatingNMissing {
         }
     }
 
-        int val1= actualSum-orgSum;
-        int val2=actualSqSqum-orgSqSum;
-        val2=val2/val1;
+        int val1= actualSum-orgSum;   // x-y
+        int val2=actualSqSqum-orgSqSum;  // x^2 - y^2
+        val2=val2/val1; // Using the identity of a^2-b^2 , (x+y)= val2 / (x-y)
 
         int x= ( val1+val2)/2;
         int y= x-val1;
