@@ -1,6 +1,5 @@
 package Placement;
-import java.util.*;
-import java.util.HashMap;;
+import java.util.*;;
 public class MajorityEle2 {
     public static void main(String[] args) {
         int arr[]={3,2,3};
@@ -36,5 +35,29 @@ public class MajorityEle2 {
             }
         }
         System.out.println(al);
+    }
+
+    public static void mooreVoting(int arr[]){
+        int count1=0;
+        int ele1=0;
+        int count2=0;
+        int ele2=0;
+        for(int i:arr){
+             if(i==ele1){
+                count1++;
+            }else if(i==ele2){
+                count2++;
+            }else if(count1==0){
+                ele1=i;
+                count1=1;
+            }else if(count2==0){
+                ele2=i;
+                count2=1;
+            }
+            else{
+                count1--;
+                count2--;
+            }
+        }
     }
 }
