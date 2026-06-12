@@ -4,9 +4,12 @@ import java.util.Arrays;
 public class Sum4 {
     public static void main(String[] args) {
         int arr[]={1,0,-1,0,-2,2};
-        System.out.println(find4Sum(arr));
+        int arr1[]={2,2,2,2};
+        int target=8;
+        // System.out.println(find4Sum(arr,target));
+        System.out.println(find4Sum(arr1, target));
     }
-    public static ArrayList<ArrayList<Integer>> find4Sum(int arr[]){
+    public static ArrayList<ArrayList<Integer>> find4Sum(int arr[], int target){
         if(arr== null || arr.length<4){
             return new ArrayList<>();
         }
@@ -24,7 +27,7 @@ public class Sum4 {
                 int end=arr.length-1;
                 while(start<end){
                     int sum=arr[i]+arr[j]+arr[start]+arr[end];
-                    if(sum==0){
+                    if(sum==target){
                         al.add(new ArrayList<>(Arrays.asList(arr[i],arr[j],arr[start],arr[end])));
                         start++;
                         end--;
@@ -36,7 +39,7 @@ public class Sum4 {
                         end--;
                     }
                 }
-                    else if(sum>0){
+                    else if(sum>target){
                         end--;
                     }else{
                         start++;
