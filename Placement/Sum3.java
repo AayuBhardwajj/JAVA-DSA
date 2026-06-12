@@ -33,19 +33,31 @@ public class Sum3{
         if(arr == null || arr.length<3 ){
             return new ArrayList<>();
         }
-        HashSet<ArrayList<Integer>> hs= new HashSet<>();
-        Arrays.sort(arr);
-        for(int i=0;i<arr.length-2;i++){
+        ArrayList<ArrayList<Integer>> hs= new ArrayList<>();   // ArrayList { inside it, another arrayList}
+        Arrays.sort(arr);   // sort the array
+        for(int i=0;i<arr.length-2;i++){ // traverse a loop for 1 time
+
+            if(i>0 && arr[i]==arr[i-1]){ // skip common elements
+                continue;
+            }
             int left=i+1;
-            int right=arr.length-1;
+            int right=arr.length-1;   // initialise left and right
+
             while(left<right){
-                int sum=arr[i]+arr[left]+arr[right];
+                int sum=arr[i]+arr[left]+arr[right];  // sum
 
                 if(sum==0){
-                    hs.add(new ArrayList<>(Arrays.asList(arr[i],arr[left], arr[right])));
+                    hs.add(new ArrayList<>(Arrays.asList(arr[i],arr[left], arr[right])));  // if sum==0, store array element at i, start and end , move i and j pointers
                     left++;
                     right--;
-                }else if(sum>0){
+
+                    while(left<right && arr[left]==arr[left-1]){ // skip duplicates from left side
+                        left++;
+                    }
+                     while(left<right && arr[right]==arr[right+1]){
+                        right--;                     // skip duplicates from right side
+                    }
+                }else if(sum>0){                     //move left and right pointers  
                     right--;
                 }else{
                     left++;

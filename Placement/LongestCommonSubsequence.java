@@ -32,7 +32,7 @@ public class LongestCommonSubsequence {
         return longest;
     }
 
-    public static int longOptimized(int arr[]){. // optimized approach
+    public static int longOptimized(int arr[]){ // optimized approach
         HashSet<Integer> hs = new HashSet<>();
         int longest=1;
         for(int i: arr){
