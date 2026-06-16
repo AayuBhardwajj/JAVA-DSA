@@ -17,9 +17,9 @@ public class SubArraySumK {
               sum+=arr[i];
             int x= sum-k;
             if(hm.containsKey(x)){
-                count++;
+                count+=hm.get(x);
             }else{
-                hm.put(sum, hm.getOrDefault(0, 1)+1);
+                hm.put(sum, hm.getOrDefault(sum, 0)+1);
             }
           
         }
