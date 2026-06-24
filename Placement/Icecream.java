@@ -13,7 +13,7 @@ public class Icecream {
             if(coins<costs[i]){
                 continue;
             }
-            if(preCount+costs[i]<coins){
+            if(preCount+costs[i]<=coins){
                 preCount+=costs[i];
                 count++;
             }
